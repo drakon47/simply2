@@ -1,0 +1,20 @@
+# Configuración de codificación UTF-8
+AddDefaultCharset UTF-8
+
+# Configuración para archivos PHP
+php_value default_charset "UTF-8"
+
+# Configuración para archivos HTML
+<FilesMatch "\.(html|htm|php)$">
+    Header set Content-Type "text/html; charset=UTF-8"
+</FilesMatch>
+
+# Configuración para archivos CSS
+<FilesMatch "\.css$">
+    Header set Content-Type "text/css; charset=UTF-8"
+</FilesMatch>
+
+# Configuración para archivos JavaScript
+<FilesMatch "\.js$">
+    Header set Content-Type "application/javascript; charset=UTF-8"
+</FilesMatch>
